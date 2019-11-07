@@ -1,19 +1,31 @@
 <template>
-  <div id="app">
+  <div id="app" class="app">
     <Header></Header>
+    <div class="main">
+      <PostList></PostList>
+    </div>
+    
   </div>
 </template>
 
 <script>
 import Header from './components/Header.vue'
+import PostList from './components/PostList.vue'
 export default {
   name: 'App',
   components:{
-    Header
+    Header,
+    PostList
   }
 }
 </script>
 
-<style>
-
+<style scoped>
+.app{
+  background: #e1e1e1;
+}
+.main{
+  width: 80%;
+  margin: 0 auto;
+}
 </style>
