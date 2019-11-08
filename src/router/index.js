@@ -2,7 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Article from '../components/Article'
 import PostList from '../components/PostList'
-import Userinfo from '../components/Userinfo'
+import UserInfo from '../components/UserInfo'
 
 Vue.use(VueRouter)
 
@@ -25,7 +25,7 @@ const routes = [
     name: 'user_info',
     path: 'userinfo/:name',
     components: {
-      main: Userinfo
+      main: UserInfo
     }
   }
   

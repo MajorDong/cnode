@@ -14,7 +14,7 @@
         </ul>
         <div v-html="post.content" class="topic_content"></div>
       </div>
-      <div>
+      <div id="reply">
         <div class="topbar">回复</div>
         <div v-for="(reply,index) in post.replies" class="replySec">
           <div class="replyUp">

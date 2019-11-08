@@ -1,7 +1,9 @@
 <template>
   <div class="postList">
     <!-- 在数据未返回的时候，显示这个正在加载的GIF -->
-    <div class="loading" v-if="isLoading"></div>
+    <div class="loading" v-if="isLoading">
+      <img src="../assets/loading.gif" alt />
+    </div>
     <!-- 代表我们的主题代表 -->
     <div class="posts" v-else>
       <ul>
