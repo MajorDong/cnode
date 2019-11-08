@@ -3,7 +3,7 @@
     <!-- 在数据未返回的时候，显示这个正在加载的GIF -->
     <div class="loading" v-if="isLoading"></div>
     <!-- 代表我们的主题代表 -->
-    <div class="posts">
+    <div class="posts" v-else>
       <ul>
         <li>
           <div class="toobar">
@@ -26,7 +26,10 @@
             :class="[{out_good:(post.good == true),put_top:(post.top == true),topiclistTab:(posts.good != true && post.top != true)}]"
           >{{post | tabFormatter}}</span>
           <!-- 标题 -->
-          <span>{{post.title}}</span>
+          <router-link :to="{name:'post_content',params:{id:post.id}}">
+            <span>{{post.title}}</span>
+          </router-link>
+
           <!-- 发帖时间 -->
           <span class="lastReply">{{post.last_reply_at | formatDate}}</span>
         </li>
